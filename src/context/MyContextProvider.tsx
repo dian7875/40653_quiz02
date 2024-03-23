@@ -14,5 +14,3 @@ export const MyProvider: React.FC<IThemeProviderProps> = ({ children, products, 
       </MyContext.Provider>
     );
 };
-
- //Cambio
