@@ -6,7 +6,7 @@ export interface IThemeProviderProps {
     step: number;
 }  
 
-export const MyProvider: React.FC<IThemeProviderProps> = ({ children, products, step }) => { //Cambio
+export const MyProvider: React.FC<IThemeProviderProps> = ({ children, products, step }) => {
     
     return (
       <MyContext.Provider value={{ products, step }} >
