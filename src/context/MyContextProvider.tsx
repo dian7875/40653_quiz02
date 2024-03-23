@@ -1,14 +1,18 @@
-import MyContext from "./MyContext";
+import MyContext, { Product } from "./MyContext";
 
-export interface IThemeProviderProps {
+export interface IThemeProviderProps { 
     children: React.ReactNode;
+    products: Product[];
+    step: number;
 }  
-  // Create a ThemeProvider component to provide the context value to child components
-  export const MyProvider: React.FC<IThemeProviderProps> = ({ children }) => {
+
+export const MyProvider: React.FC<IThemeProviderProps> = ({ children, products, step }) => { //Cambio
     
     return (
-      <MyContext.Provider value={{}} >
+      <MyContext.Provider value={{ products, step }} >
          {children}
       </MyContext.Provider>
     );
-  };
+};
+
+ //Cambio
